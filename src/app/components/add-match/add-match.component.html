@@ -1,0 +1,43 @@
+<app-banner [title]="matchP"></app-banner>
+
+  
+  <div class="site-section" style="margin-left: 35%;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form #addMatchForm="ngForm" (ngSubmit)="addMatch()">
+            <div class="form-group">
+                <label style="color: white;" for="">team 1 image
+              <input type="text" class="form-control" [(ngModel)]="match.teamOneImg" placeholder="team 1 image" name="imgOne">
+            </label>
+            </div>
+            <div class="form-group">
+                <label style="color: white;" for="">team 2 image
+                <input type="text" class="form-control" [(ngModel)]="match.teamTwoImg" placeholder="team 2 image" name="imgTwo">
+            </label>  
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" [(ngModel)]="match.scoreOne" placeholder="score 1" name="scoreOne">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" [(ngModel)]="match.scoreTwo" placeholder="score 2" name="scoreTwo">
+              </div>
+            <div class="form-group">
+              <input type="text" class="form-control" [(ngModel)]="match.teamOne" placeholder="team 1 Name" name="teamOne">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="match.teamTwo" placeholder="team 2 Name" name="teamTwo">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="match.stadium" placeholder="stadium" name="stadium">
+              </div>
+            
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary py-3 px-5"  value="Add">
+            </div>
+          </form>  
+        </div>
+        
+      </div>
+    </div>
+  </div>

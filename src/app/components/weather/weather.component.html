@@ -1,0 +1,28 @@
+<app-banner title="search weather"></app-banner>
+
+<div class="site-section" style="margin-left: 35%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <form #weatherForm="ngForm" (ngSubmit)="weatherSeach()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="weather.country" name="country"  placeholder="country" >
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary py-3 px-5" value="search">
+                    </div>
+                    
+                </form>
+            </div>
+            <div *ngIf=isloaded>
+                <app-loader></app-loader>
+            </div>
+            <div *ngIf="result">
+                <div>temperature :{{result.temp}}</div>
+                <div>pressure :{{result.pressure}}</div>
+                <div>humidity :{{result.humidity}}</div>
+            </div>
+            
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<app-banner title="Edit Player"></app-banner>
+
+
+<div class="site-section" style="margin-left: 35%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <form #addPlayerForm="ngForm" (ngSubmit)="editPlayer()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="player.playerName" placeholder="Player Name" name="player">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" [(ngModel)]="player.age" placeholder="Age" name="Age">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" [(ngModel)]="player.number" placeholder="Number"
+                            name="Number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="player.position" placeholder="Position"
+                            name="Position">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary py-3 px-5" value="Add">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

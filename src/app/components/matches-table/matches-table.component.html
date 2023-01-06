@@ -1,0 +1,34 @@
+<form >
+  <input type="text" name="team" [(ngModel)]="term" id="">
+</form>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Team 1's image</th>
+        <th scope="col">Team 2's image</th>
+        <th scope="col">Team 1's Name</th>
+        <th scope="col">Team 2's Name</th>
+        <th scope="col">Team 1's score</th>
+        <th scope="col">Team 2's score</th>
+        <th scope="col">stadium</th>
+        <th scope="col" colspan="3" style="text-align: center;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let match of matches | myFilter:term">
+        <th scope="row">{{match._id}}</th>
+        <td>{{match.teamOneImg}}</td>
+        <td>{{match.teamTwoImg}}</td>
+        <td>{{match.teamOne}}</td>
+        <td>{{match.teamTwo}}</td>
+        <td>{{match.scoreOne}}</td>
+        <td>{{match.scoreTwo}}</td>
+        <td>{{match.stadium}}</td>
+        <td><button class="btn btn-info" (click)="displayMatch(match._id)">Display</button></td>
+        <td><button class="btn btn-warning" (click)="editMatch(match._id)">Edit</button></td>
+        <td><button class="btn btn-danger" (click)="deleteMatch(match._id)">Delete</button></td>
+      </tr>
+
+    </tbody>
+  </table>

@@ -1,0 +1,35 @@
+<app-banner title="search filter"></app-banner>
+ 
+<form #searchFilterForm="ngForm" style="margin-left: 10%;margin-top: 20px;">
+    <div class="form-group">
+    <label style="color: white;" for="">Score One
+      <input type="text" class="form-control" [(ngModel)]="search.scoreOne" placeholder="Score One" >
+    </label>
+    </div>
+</form>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        
+        <th scope="col">Team 1's Name</th>
+        <th scope="col">Team 2's Name</th>
+        <th scope="col">Team 1's score</th>
+        <th scope="col">Team 2's score</th>
+       
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let match of matches ">     
+        <td>{{match.teamOne}}</td>
+        <td>{{match.teamTwo}}</td>
+        <td>{{match.scoreOne}}</td>
+        <td>{{match.scoreTwo}}</td>
+       
+       
+      </tr>
+
+    </tbody>
+  </table>
+

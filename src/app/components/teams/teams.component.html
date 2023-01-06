@@ -1,0 +1,25 @@
+<table class="table table-hover">
+
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Team's image</th>
+            <th scope="col">Team's Name</th>
+            <th scope="col">Foundation</th>
+            <th scope="col">stadium</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let team of teams, let i=index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{team.teamImg}}</td>
+            <td>{{team.team}}</td>
+            <td>{{team.Foundation}}</td>
+            <td>{{team.stadium}}</td>
+            <td><button class="btn btn-danger" (click)="deleteTeam(id)">delete</button></td>
+
+        </tr>
+
+    </tbody>
+</table>

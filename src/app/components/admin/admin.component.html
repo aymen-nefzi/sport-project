@@ -1,0 +1,54 @@
+<app-banner [title]="admin"></app-banner>
+<span style="color: white;">{{actualDate| date:"dd/MM-yyyy hh:mm"}}</span>
+
+<section class="admin_part " style="margin-top: 50px;">
+  <div class="container-fluid">
+    <div style="display: flex;
+            justify-content: center;
+            align-items: center ;">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#matches" type="button"
+            role="tab" aria-controls="matches" aria-selected="true">Matches</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="chefs-tab" data-toggle="tab" data-target="#teams" type="button" role="tab"
+            aria-controls="teams" aria-selected="false">Teams</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="players-tab" data-toggle="tab" data-target="#players" type="button" role="tab"
+            aria-controls="players" aria-selected="false">players</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="players-tab" data-toggle="tab" data-target="#stadium" type="button" role="tab"
+            aria-controls="stadium" aria-selected="false">Stadiums</button>
+        </li>
+
+      </ul>
+    </div>
+    <div class="tab-content" id="myTabContent" style="color: white;">
+      <div class="tab-pane fade show active" id="matches" role="tabpanel" aria-labelledby="matches-tab">
+        <app-matches-table></app-matches-table>
+      </div>
+      <div class="tab-pane fade" id="teams" role="tabpanel" aria-labelledby="teams-tab">
+          <app-teams></app-teams>
+      </div>
+      <div class="tab-pane fade" id="players" role="tabpanel" aria-labelledby="players-tab">
+        
+
+          <app-players></app-players>
+        
+      </div>
+      <div class="tab-pane fade" id="stadium" role="tabpanel" aria-labelledby="stadium-tab">
+        
+          <app-stadium-table></app-stadium-table>
+        
+      
+    </div>
+
+    </div>
+    
+  </div>
+  
+
+</section>

@@ -1,0 +1,36 @@
+<app-banner title="stadium Form"></app-banner>
+
+  
+  <div class="site-section" style="margin-left: 35%;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <form #addStadiumForm="ngForm" (ngSubmit)="addStadium()">
+            <div class="form-group">
+                
+              <input type="text" class="form-control" [(ngModel)]="stadium.stadiumName" placeholder="stadium Name" name="name">
+            
+            </div>
+            <div class="form-group">
+                
+                <input type="number" class="form-control" [(ngModel)]="stadium.capacity" placeholder="capacity" name="capacity">
+             
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" [(ngModel)]="stadium.foundation" placeholder="foundation" name="foundation">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" [(ngModel)]="stadium.country" placeholder="country" name="country">
+              </div>
+            
+            
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary py-3 px-5"  value="Add">
+            </div>
+          </form>  
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
